@@ -38,6 +38,7 @@ function initializePage() {
 						bigBoard[id] = player;
 						$(this).append('<div class="' + piece + '"></div>');
 						if(checkWin(bigBoard)) {
+							$(".section").addClass("selected");
 							gameWon();
 						}
 					}
@@ -65,15 +66,17 @@ function newSelected(x, y) {
 
 function hoverQuery() {
 	$(".section").mousemove(function(event) {
-		var offset = $(this).offset();
-		var x = Math.floor((event.pageX - offset.left) / ($(this).width() / 3));
-		var y = Math.floor((event.pageY - offset.top) / ($(this).height() / 3));
 		$(".hover").remove();
-		var id = parseInt($(this).attr('id'))
-		if(board[id - 1][x + y*3] != 0) {
-			return;
-		}
-		if($("#" + id).hasClass("selected")) {
+		if(won) return;
+		if($(this).hasClass("selected")) {
+			var offset = $(this).offset();
+			var x = Math.floor((event.pageX - offset.left) / ($(this).width() / 3));
+			var y = Math.floor((event.pageY - offset.top) / ($(this).height() / 3));
+			
+			var id = parseInt($(this).attr('id'))
+			if(board[id - 1][x + y*3] != 0) {
+				return;
+			}
 			var piece = player == 1 ? "cross" : "circle";
 			$(this).append('<div class="subsection x-' + x + ' y-' + y + ' hover"><div class="' + piece + '"></div></div>');
 		}
