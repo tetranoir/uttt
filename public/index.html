@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Ultimate tic tac toe</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Ultimate tic tac toe</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-offset-3">
+				<h1 id="player">Player 1</h1>
+			</div>
+		</div>
+		<hr>
+		<div class="board" id="game">
+			<div class="separator-y" style="left: 32%;"></div>
+			<div class="separator-y" style="left: 66%;"></div>
+			<div class="separator-x" style="top: 32%;"></div>
+			<div class="separator-x" style="top: 66%;"></div>
+
+			<div class="section x-0 y-0" id="1">
+				<div class="separator-y" style="left: 32%;"></div>
+				<div class="separator-y" style="left: 66%;"></div>
+				<div class="separator-x" style="top: 32%;"></div>
+				<div class="separator-x" style="top: 66%;"></div>
+			</div>
+			<div class="section x-1 y-0" id="2">
+				<div class="separator-y" style="left: 32%;"></div>
+				<div class="separator-y" style="left: 66%;"></div>
+				<div class="separator-x" style="top: 32%;"></div>
+				<div class="separator-x" style="top: 66%;"></div>
+			</div>
+			<div class="section x-2 y-0" id="3">
+				<div class="separator-y" style="left: 32%;"></div>
+				<div class="separator-y" style="left: 66%;"></div>
+				<div class="separator-x" style="top: 32%;"></div>
+				<div class="separator-x" style="top: 66%;"></div>
+			</div>
+			<div class="section x-0 y-1" id="4">
+				<div class="separator-y" style="left: 32%;"></div>
+				<div class="separator-y" style="left: 66%;"></div>
+				<div class="separator-x" style="top: 32%;"></div>
+				<div class="separator-x" style="top: 66%;"></div>
+			</div>
+			<div class="section x-1 y-1" id="5">
+				<div class="separator-y" style="left: 32%;"></div>
+				<div class="separator-y" style="left: 66%;"></div>
+				<div class="separator-x" style="top: 32%;"></div>
+				<div class="separator-x" style="top: 66%;"></div>
+			</div>
+			<div class="section x-2 y-1" id="6">
+				<div class="separator-y" style="left: 32%;"></div>
+				<div class="separator-y" style="left: 66%;"></div>
+				<div class="separator-x" style="top: 32%;"></div>
+				<div class="separator-x" style="top: 66%;"></div>
+			</div>
+			<div class="section x-0 y-2" id="7">
+				<div class="separator-y" style="left: 32%;"></div>
+				<div class="separator-y" style="left: 66%;"></div>
+				<div class="separator-x" style="top: 32%;"></div>
+				<div class="separator-x" style="top: 66%;"></div>
+			</div>
+			<div class="section x-1 y-2" id="8">
+				<div class="separator-y" style="left: 32%;"></div>
+				<div class="separator-y" style="left: 66%;"></div>
+				<div class="separator-x" style="top: 32%;"></div>
+				<div class="separator-x" style="top: 66%;"></div>
+			</div>
+			<div class="section x-2 y-2" id="9">
+				<div class="separator-y" style="left: 32%;"></div>
+				<div class="separator-y" style="left: 66%;"></div>
+				<div class="separator-x" style="top: 32%;"></div>
+				<div class="separator-x" style="top: 66%;"></div>
+			</div>
+		</div>
+		<br>
+		<hr>
+		<div class="row">
+			<div class="col-xs-offset-1 col-xs-8">
+				<h2>Rules</h2>
+				<p><b>1. </b>The selected section of a small game indicates where the next peice will have to be played</p>
+				<p><b>2. </b>Small games that are won by a player is used to check the winner on the overall board</p>
+				<p><b>3. </b>Small games where a winner has been determined may still be played on</p>
+				<p><b>4. </b>Play tic tac toe</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/game.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+.board {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	height: 500px;
+	width: 500px;
+}
+
+.section {
+	position: absolute;
+	/*border: 1px solid black;*/
+	width: 32%;
+	height: 32%;
+	background: #cccccc;
+}
+
+.section > .circle {
+	height: 80%;
+	width: 80%;
+	margin-top: 10%;
+	margin-left: 10%;
+	border-radius: 50%;
+	background: transparent;
+	border: 10px solid #333333;
+	z-index: 1;
+}
+
+.section > .cross {
+	margin-right: auto;
+	margin-left: auto;
+	height: 100%;
+	width: 10px;
+	background-color: #333333;
+	transform: rotate(45deg);
+	z-index: 1;
+}
+
+.section > .cross:before {
+	position: absolute;
+	content:"";
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	background-color: #333333;
+	transform: rotate(90deg);
+	z-index: 1;
+}
+
+.subsection {
+	position: absolute;
+	height: 32%;
+	width: 32%;
+	
+}
+
+.subsection > .circle {
+	height: 80%;
+	width: 80%;
+	margin-top: 10%;
+	margin-left: 10%;
+	border-radius: 50%;
+	background: transparent;
+	border: 6px solid black;
+}
+
+.subsection > .cross {
+	margin-right: auto;
+	margin-left: auto;
+	height: 100%;
+	width: 6px;
+	background-color: black;
+	transform: rotate(45deg);
+}
+
+.subsection > .cross:before {
+	position: absolute;
+	content:"";
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	background-color: black;
+	transform: rotate(90deg);
+}
+
+.hover > .circle {
+	height: 80%;
+	width: 80%;
+	margin-top: 10%;
+	margin-left: 10%;
+	border-radius: 50%;
+	background: transparent;
+	border: 6px solid gray;	
+}
+
+.hover > .cross {
+	margin-right: auto;
+	margin-left: auto;
+	height: 100%;
+	width: 6px;
+	background-color: gray;
+	transform: rotate(45deg);
+}
+
+.hover > .cross:before {
+	position: absolute;
+	content:"";
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	background-color: gray;
+	transform: rotate(90deg);
+}
+
+.separator-y {
+	position: absolute;
+	background-color: black;
+	height: 100%;
+	width: 2%;
+}
+
+.separator-x {
+	position: absolute;
+	background-color: black;
+	height: 2%;
+	width: 100%;
+}
+
+.y-0 {
+	top: 0%;
+}
+
+.y-1 {
+	top: 34%;
+}
+
+.y-2 {
+	top: 68%;
+}
+
+.x-0 {
+	left: 0%;
+}
+
+.x-1 {
+	left: 34%;
+}
+
+.x-2 {
+	left: 68%;
+}
+
+.selected {
+	border: #4195fc;
+	box-shadow: 0px 0px 45px #4195fc;
+	background: white;
+}
+
+.won {
+	border: #e9f25f;
+	box-shadow: 0px 0px 45px #e9f25f;
+}
+
+.last-move {
+	box-shadow: 0px 0px 5px #4195fc inset;
+}
