@@ -40,6 +40,7 @@ function initializePage() {
 						if(checkWin(bigBoard)) {
 							$(".section").addClass("selected");
 							gameWon();
+							return;
 						}
 					}
 				}
